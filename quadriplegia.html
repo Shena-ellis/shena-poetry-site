@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services - Personal Bootstrap Template</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/s_favicon_2.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/s_favicon_3.png"
+    />
+    <link rel="apple-touch-icon" href="assets/img/s_favicon.png" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Page-scoped styles for the THREE image background cards only -->
+    <style>
+      :root {
+        --accent: #32cd32;
+      }
+      .offset-for-header {
+        padding-top: 90px;
+      }
+
+      /* Shared hover style template */
+      .image-card {
+        position: relative;
+        color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        min-height: 250px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* NEW: real <img> fills the card like background-size: cover */
+      .image-card .card-img {
+        position: absolute;
+        inset: 0; /* top/right/bottom/left: 0 */
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* same visual as background-size: cover */
+        object-position: center;
+        border-radius: 10px;
+        z-index: 0;
+      }
+
+      .image-card .bg-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        border-radius: 10px;
+        transition: background 0.3s ease;
+        z-index: 1;
+      }
+      .image-card .card-inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .image-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      .image-card:hover .bg-overlay {
+        background: rgba(50, 205, 50, 0.55);
+      }
+      .image-card:hover h3,
+      .image-card:hover p,
+      .image-card:hover a,
+      .image-card:hover .icon {
+        color: var(--accent) !important;
+      }
+    </style>
+  </head>
+
+  <body class="services-page">
+    <!-- Header -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="my_story.html">My Story</a></li>
+            <li><a href="my_hero.html">My Hero</a></li>
+            <li><a href="the_crash.html">The Crash</a></li>
+            
+              <a
+                href="quadriplegia.html"
+                class="rainbow-text"
+                style="
+                  font-weight: bold;
+                  text-decoration: none;
+                  background: linear-gradient(
+                    90deg,
+                    red,
+                    orange,
+                    yellow,
+                    green,
+                    blue,
+                    indigo,
+                    violet
+                  );
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  background-size: 400% 400%;
+                  animation: rainbowShift 8s ease infinite;
+                  display: inline-block;
+                "
+              >
+                Quadriplegia
+              </a>
+
+              <style>
+                @keyframes rainbowShift {
+                  0% {
+                    background-position: 0% 50%;
+                  }
+                  50% {
+                    background-position: 100% 50%;
+                  }
+                  100% {
+                    background-position: 0% 50%;
+                  }
+                }
+              </style>
+            </li>
+            <li><a href="poetry.html">Poetry</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main offset-for-header">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Quadriplegia</h1>
+                <p class="mb-0">
+                  THIS X-RAY OF MY NECK WAS TAKEN ON MY 39th BIRTHDAY
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Quadriplegia</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Biology (NOW USING <img>) -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div id="biology-card" class="service-item image-card">
+                <img
+                  src="assets/img/cervicle_spine.jpg"
+                  alt="Biology"
+                  class="card-img"
+                />
+                <div class="bg-overlay" aria-hidden="true"></div>
+                <div class="card-inner">
+                  <a
+                    href="biology.html"
+                    class="stretched-link"
+                    style="color: #fff; text-decoration: none"
+                  >
+                    <h3>Biology</h3>
+                  </a>
+                  <p>C3-T3 Decompression/Fusion</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Challenges (NOW WITH IMAGE) -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div id="challenges-card" class="service-item image-card">
+                <img
+                  src="assets/img/challenges.jpg"
+                  alt="Challenges"
+                  class="card-img"
+                />
+                <div class="bg-overlay" aria-hidden="true"></div>
+                <div class="card-inner">
+                  <a
+                    href="challenges.html"
+                    class="stretched-link"
+                    style="color: #fff; text-decoration: none"
+                  >
+                    <h3>Challenges</h3>
+                  </a>
+                  <p>The Weight Of The World On My Wheels</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div id="myhero-card" class="service-item image-card">
+                <img
+                  src="assets/img/babe_work.jpeg"
+                  alt="My Knight in Shining Armor"
+                  class="card-img"
+                />
+                <div class="bg-overlay" aria-hidden="true"></div>
+                <div class="card-inner">
+                  <a
+                    href="my_hero.html"
+                    class="stretched-link"
+                    style="color: #fff; text-decoration: none"
+                  >
+                    <h3>My Hero</h3>
+                  </a>
+                  <p>The Knight In Shining Armor Who Keeps Me Alive</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div id="poetry-card" class="service-item image-card">
+                <img
+                  src="assets/img/mermangel.jpg"
+                  alt="Very Sad Poetry"
+                  class="card-img"
+                />
+                <div class="bg-overlay" aria-hidden="true"></div>
+                <div class="card-inner">
+                  <a
+                    href="very_sad_poetry.html"
+                    class="stretched-link"
+                    style="color: #fff; text-decoration: none"
+                  >
+                    <h3>Very Sad Poetry</h3>
+                  </a>
+                  <p>Warning! Not For The Faint Of Heart</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <div class="social-links d-flex justify-content-center">
+          <a
+            href="https://www.facebook.com/shena.ellis"
+            target="_blank"
+            class="bi bi-facebook"
+          ></a>
+          <a
+            href="https://www.instagram.com/mermangel_maghillicuddie"
+            target="_blank"
+            class="bi bi-instagram"
+          ></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Shena Ellis</strong>
+            <span>All Rights Reserved</span>
+          </div>
+          <div class="footer-links">
+            <a
+              href="sitemap.html"
+              style="color: limegreen; font-weight: 600; text-decoration: none"
+              onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
+              onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';"
+            >
+              Site Map
+            </a>
+          </div>
+          <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

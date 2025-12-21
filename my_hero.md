@@ -1,0 +1,12 @@
+David is a Master Carpenter. His boss once told me he was what they call a "Hot Shot"- meaning he can build anything.
+We met in the parking Lot of a nightclub in Santa Cruz when a friend asked me if I would give him a ride back to Big Sur. I reluctantly said yes- hesitant about putting his dog in the backseat of my rental car which I had to return in the morning. He was so thankful, leaving 80 bucks in my cupholder when I dropped him off. 
+- the next day he showed up at the restaurant where I was waitressing at the time, ordered some cheesecake, and with confidence that I didn't understand, asked me out. 
+- I boldly declined, stating that I prefer to do my own thing. I was thinking to myself, "who does this guy think he is?" Clearly I had no idea.
+- a few months go by, I see him around here and there, but still I have no idea where he came from. In Big Sur, the locals are a very tight knit group. Nobody just moves to town without a purpose. Everybody that's here has a job- either working at one of the five local establishments, or caretaking. There's about 20 of us who have all known each other for 10+ years. Not very many people come and go from here. So who was this guy?
+- he started to catch my attention, mostly because his dog was so dang cute. 
+- one night, when I got off work, I joined some of my friends around the fire table on the back patio of the bar/grill where I worked/lived. David was there with Hirie (his Staffordshire Terrier), and his girlfriend. The girls were yammering on about some nonsense, and I looked at him, and I whispered "Can we just get outta' here?" He nodded, and I stood up and walked out the door. He and Hirie got in my car without a word, and I drove about an hour south to a magical Sandy beach on a cliff. The rest is history. 
+- he proposed about a year and a half later, two days before my birthday in January, 2022.
+- Fast forward six months-  he was building multimillion dollar mini mansion in the Carmel Valley preserve. I was waitressing at a world renoun restaurant called Nepenthe. Our life was perfect. We were what they call a Power Couple.  That's when I crashed.
+- David never left my side after the accident. (three years later and I could still barely get him to leave me alone for a minute)
+- I woke up in the ICU, and David was begging me to marry him on the spot. 
+- He is now a full-time caregiver/ nurse/ Best friend/ psychologist/ housekeeper/ chef/ Gardner/ handyman/ can you please pick up this/ can you hand me my that/BAAABE!!/ I need my-/ I can't reach the- ... You get the point. 

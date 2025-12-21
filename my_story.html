@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>My Story</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/s_favicon_2.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/s_favicon_3.png"
+    />
+    <link rel="apple-touch-icon" href="assets/img/s_favicon.png" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* ---- FIXED BACKGROUND LAYER (shows ENTIRE image, no crop) ---- */
+      .fixed-bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0; /* behind everything */
+        pointer-events: none;
+        background: #000; /* fills the letterbox area */
+      }
+      .fixed-bg img {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain; /* show the WHOLE image */
+        object-position: bottom center;
+        opacity: 0.85; /* optional vibe */
+      }
+
+      /* ---- CONTENT ABOVE THE IMAGE ---- */
+      header,
+      .page-title,
+      .breadcrumbs,
+      .resume.section,
+      footer {
+        position: relative;
+        z-index: 1;
+        background: transparent !important; /* no cards, no panels */
+      }
+
+      /* If your header is fixed, keep content from hiding beneath it */
+      body.resume-page main.main {
+        padding-top: 120px;
+      }
+
+      /* ---- READABILITY WITHOUT CARDS ---- */
+      body {
+        color: #fff;
+      } /* make text visible over dark photo */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p,
+      li,
+      a,
+      small,
+      em {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+      }
+      a {
+        color: #bde0ff;
+      }
+    </style>
+  </head>
+
+  <body class="resume-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center"></a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+              <a
+                href="my_story.html"
+                class="rainbow-text"
+                style="
+                  font-weight: bold;
+                  text-decoration: none;
+                  background: linear-gradient(
+                    90deg,
+                    red,
+                    orange,
+                    yellow,
+                    green,
+                    blue,
+                    indigo,
+                    violet
+                  );
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  background-size: 400% 400%;
+                  animation: rainbowShift 8s ease infinite;
+                  display: inline-block;
+                "
+              >
+                My Story
+              </a>
+
+              <style>
+                @keyframes rainbowShift {
+                  0% {
+                    background-position: 0% 50%;
+                  }
+                  50% {
+                    background-position: 100% 50%;
+                  }
+                  100% {
+                    background-position: 0% 50%;
+                  }
+                }
+              </style>
+            </li>
+            <li><a href="my_hero.html">My Hero</a></li>
+            <li><a href="the_crash.html">The Crash</a></li>
+            <li><a href="quadriplegia.html">Quadriplegia</a></li>
+            <li><a href="poetry.html">Poetry</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <!-- FIXED BACKGROUND IMAGE (no cropping) -->
+    <div class="fixed-bg" aria-hidden="true">
+      <img src="assets/img/san_martin_top.jpeg" alt="San Martin view" />
+    </div>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade" style="position: relative">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>My Story</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="breadcrumbs" style="position: relative">
+          <div class="container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">My Story</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <div class="container">
+          <div class="row">
+            <!-- Left column -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">History</h3>
+              <div class="resume-item pb-0">
+                <h4>Childhood</h4>
+                <p><em>The formative years</em></p>
+                <ul>
+                  <li>
+                    Born in Stockton, CA in 1984 to Mother Shelene (age 14) and
+                    Father Mike (age 21)
+                  </li>
+                  <li>
+                    In 1990, Mike gains full custody; Mom takes me and my little
+                    brother (4 years my junior) to Washington
+                  </li>
+                  <li>
+                    1994: Mom is arrested for child abduction and I am sent back
+                    to CA to live with Mike, a total stranger. Mom is sent to
+                    prison for 2 years for child abduction.
+                  </li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">High School</h3>
+              <div class="resume-item">
+                <h4>Edison Senior High School</h4>
+                <h5>1999–2002</h5>
+                <ul>
+                  <li>
+                    Dr. Martin Luther King Blvd. (formerly Charter Way),
+                    Stockton, CA
+                  </li>
+                  <li>
+                    Fighting my way through high school, being the target in
+                    gang initiations, and blamed during riots for the
+                    deportation of a student involved in a fight, I still
+                    managed to maintain a 3.6 GPA.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right column -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Big Sur, CA</h3>
+              <div class="resume-item">
+                <h4>Gorda Springs Resort</h4>
+                <h5>Originally 2012</h5>
+                <p>
+                  When I was 27, a friend called me one day and said “I just got
+                  you a job and a place to live on the coast.” No questions
+                  asked, I packed 1 suitcase and left Stockton, and never looked
+                  back.
+                </p>
+                <p>
+                  <em
+                    ><a href="https://gordaspringsresort.com"
+                      >Gorda Springs Resort</a
+                    ></em
+                  >
+                </p>
+                <ul>
+                  <li>Hired based on recommendation – I was 27 years old</li>
+                  <li>On-site housing</li>
+                  <li>Worked 6 days a week at the General Store</li>
+                  <li>
+                    Watched whales breach for over an hour with Hilary Swank on
+                    the front porch in front of the store, never even asking her
+                    name. It wasn’t until after she left that my boss came
+                    running over and excitedly explained who she was!
+                  </li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h3>My Hero</h3>
+                <h5>David Toschak</h5>
+                <p><em>2019–present</em></p>
+                <ul>
+                  <li>Started dating June 20, 2019</li>
+                  <li>Moved to Palo Colorado Rd. in 2020</li>
+                  <li>He proposed on January 18, 2022</li>
+                  <li>
+                    He remains my full-time caregiver, my salvation, my Hero
+                  </li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h3>The Crash</h3>
+                <h4>Becoming a Quadriplegic</h4>
+                <h5>Monday, May 23, 2022</h5>
+                <ul>
+                  <li>
+                    Driving a 1999 Porsche Boxster Convertible (5-speed manual)
+                  </li>
+                  <li>
+                    On my way home from work, I flipped a tiny convertible going
+                    65mph on Highway 1
+                  </li>
+                  <li>
+                    Was airlifted to Natividad Hospital in Salinas, arriving
+                    over 4 hours after my accident
+                  </li>
+                  <li>
+                    Broke my neck at the C5–C6 level, compacting my spine 4
+                    inches and severing nerves
+                  </li>
+                  <li>
+                    Shattered the left side of my face and suffered a traumatic
+                    brain injury which caused me to stutter for 4 months
+                  </li>
+                  <li>David never left my side</li>
+                  <li>
+                    Check out <a href="my_hero.html">My Hero</a> for more about
+                    this amazing man!
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /Right column -->
+          </div>
+        </div>
+      </section>
+      <!-- /Resume Section -->
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <h3 class="sitename">My Story</h3>
+        <div class="social-links d-flex justify-content-center">
+          <a
+            href="https://www.facebook.com/shena.ellis"
+            target="_blank"
+            class="bi bi-facebook"
+          ></a>
+          <a
+            href="https://www.instagram.com/mermangel_maghillicuddie"
+            target="_blank"
+            class="bi bi-instagram"
+          ></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Personal</strong>
+            <span>All Rights Reserved</span>
+          </div>
+          <div class="footer-links">
+            <a
+              href="sitemap.html"
+              style="color: limegreen; font-weight: 600; text-decoration: none"
+              onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
+              onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';"
+              >Site Map</a
+            >
+          </div>
+          <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

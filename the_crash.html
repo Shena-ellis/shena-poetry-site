@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>The Crash — May 23, 2022</title>
+  <meta name="description" content="My account of the crash on Highway 1 near Bixby Bridge, the injury and surgery, ICU moments, and the love that carried me through." />
+  <meta name="keywords" content="Highway 1, Bixby Bridge, spinal cord injury, C5, laminectomy, fusion C3–T3, ICU, quadriplegia" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_3.png" />
+  <link rel="apple-touch-icon" href="assets/img/s_favicon.png" />
+
+  <!-- Vendor CSS (Bootstrap + icons + effects) -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- Page-only helpers -->
+  <style>
+    /* keep the rainbow text class out of the <li> */
+    .rainbow-text {
+      font-weight: 700;
+      text-decoration: none;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 400% 400%;
+      animation: rainbowShift 8s ease infinite;
+      display: inline-block;
+    }
+    @keyframes rainbowShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Ensure the burger is visible on dark header */
+    .mobile-nav-toggle { color: #eee; font-size: 28px; line-height: 1; cursor: pointer; }
+
+    /* Your translucent header background */
+    #header.header {
+      background: linear-gradient(to bottom, rgba(0,0,0,.65), rgba(0,0,0,0));
+      border-bottom: 1px solid rgba(124,252,0,.35);
+      backdrop-filter: saturate(130%) blur(4px);
+    }
+
+    /* Don’t force layout on the UL; let the template toggle it for mobile */
+    /* Optional: small gap on desktop only */
+    @media (min-width: 1200px) {
+      #navmenu ul { gap: 18px; }
+    }
+  </style>
+</head>
+
+<body class="resume-page" style="margin:0; background:transparent; color:#eeeeee">
+  <!-- Fixed background image -->
+  <div aria-hidden="true" style="position:fixed; inset:0; z-index:0; display:grid; place-items:center; background:#000; pointer-events:none;">
+    <img src="assets/img/cervicle_spine.jpg" alt="Cervical spine C5 illustration"
+         style="width:100vw; height:100vh; object-fit:contain; object-position:center; display:block;" />
+  </div>
+
+  <!-- Soft vignette for readability -->
+  <div aria-hidden="true" style="position:fixed; inset:0; z-index:0; pointer-events:none;
+       background:radial-gradient(120% 85% at 50% 20%, rgba(0,0,0,0) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.65) 100%);">
+  </div>
+
+  <!-- Everything below floats over the image -->
+  <div style="position:relative; z-index:1">
+    <!-- Header / Navbar -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center" style="text-decoration:none">
+          <h1 class="sitename" style="margin:0; color:#eeeeee"></h1>
+        </a>
+
+        <!-- IMPORTANT: keep this structure so main.js can toggle properly -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" style="color:#eeeeee; text-decoration:none">Home</a></li>
+            <li><a href="about.html" style="color:#eeeeee; text-decoration:none">About</a></li>
+            <li><a href="my_story.html" style="color:#eeeeee; text-decoration:none">My Story</a></li>
+            <li><a href="my_hero.html" style="color:#eeeeee; text-decoration:none">My Hero</a></li>
+            <li><a href="the_crash.html" class="rainbow-text">The Crash</a></li>
+            <li><a href="quadriplegia.html" style="color:#eeeeee; text-decoration:none">Quadriplegia</a></li>
+            <li><a href="poetry.html" style="color:#eeeeee; text-decoration:none">Poetry</a></li>
+            <li><a href="biology.html" style="color:#eeeeee; text-decoration:none">Biology</a></li>
+            <li><a href="contact.html" style="color:#eeeeee; text-decoration:none">Contact</a></li>
+          </ul>
+          <!-- Exactly ONE toggle icon -->
+          <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Open menu"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" style="background:transparent">
+      <!-- Spacer so content clears fixed header -->
+      <div style="height:84px"></div>
+
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade" style="background:transparent">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-9">
+                <h1 style="color:#eeeeee; text-shadow:0 0 10px rgba(0,0,0,.85);">The Crash</h1>
+                <p class="lead mb-0" style="color:#eeeeee">Everything can change, in the blink of an eye</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="breadcrumbs">
+          <div class="container">
+            <ol style="display:flex; gap:8px; justify-content:center; padding:0; margin:16px 0; list-style:none;">
+              <li><a href="index.html" style="color:#7cfc00; text-decoration:none">Home</a></li>
+              <li class="current" style="color:#eeeeee">The Crash</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Sections -->
+      <section class="section" style="background:transparent">
+        <div class="container" data-aos="fade-up" data-aos-delay="50">
+          <div style="padding:1.25rem; border:1px solid rgba(124,252,0,.35); border-radius:1rem; background:rgba(0,0,0,.15); backdrop-filter:blur(2px) saturate(120%);">
+            <h2 class="h4" style="display:inline-block; padding-bottom:4px; border-bottom:3px solid #7cfc00; margin:0 0 12px 0;">Monday, May 23, 2022 <br/>Big Sur, Ca.</h2>
+
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55); margin-top:12px;">
+              <span style="color:#7cfc00; font-weight:600">10:00 AM</span> — On my way to work, I stopped by Fernwood Resort and dropped off a dozen purple roses to my best friend, Cara.
+            </p>
+
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              <span style="color:#7cfc00; font-weight:600">11:00 AM – 7:00 PM</span> — I worked at Nepenthe. Leaving, I walked down to the parking lot with a co-worker and friend, doing a cartwheel before getting into a 1999 Porsche Boxter convertible (5-speed, manual).
+            </p>
+
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              About twenty minutes later—three miles from home—rounding a corner on the Pacific Coast Highway, about a quarter mile south of Bixby Bridge, I clipped a small curb on the passenger side...
+            </p>
+
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              Without losing consciousness, though unaware of the severity of the situation, I turned the radio off, took the keys out...
+            </p>
+
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              Just then, two guys came running up— they looked panicked. <strong>"Go get David"</strong> I said, calmly...
+            </p>
+
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              Within 15 minutes, David and a friend were there with me...
+            </p>
+
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              Paramedics arrived nearly an hour later...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background:transparent">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div style="padding:1.25rem; border:1px solid rgba(124,252,0,.35); border-radius:1rem; background:rgba(0,0,0,.15); backdrop-filter:blur(2px) saturate(120%);">
+            <h2 class="h4" style="display:inline-block; padding-bottom:4px; border-bottom:3px solid #7cfc00; margin:0 0 12px 0;">My Injury</h2>
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              I underwent <strong>six and a half hours of surgery</strong> to reattach my vertebrae...
+            </p>
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              I woke up in the ICU to find David there...
+            </p>
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              I had also shattered all the bones on the left side of my face...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background:transparent">
+        <div class="container" data-aos="fade-up" data-aos-delay="150">
+          <div style="padding:1.25rem; border:1px solid rgba(124,252,0,.35); border-radius:1rem; background:rgba(0,0,0,.15); backdrop-filter:blur(2px) saturate(120%);">
+            <h2 class="h4" style="display:inline-block; padding-bottom:4px; border-bottom:3px solid #7cfc00; margin:0 0 12px 0;">My Salvation</h2>
+            <p style="text-shadow:0 1px 6px rgba(0,0,0,.55);">
+              Through the entire process, <strong>David</strong> never left my side...
+            </p>
+            <div class="d-flex align-items-center gap-2" style="opacity:.9">
+              <i class="bi bi-heart-fill" style="color:#7cfc00"></i>
+              <span class="small" style="color:#bdbdbd">Read more in
+                <a href="my_hero.html" style="color:#7cfc00; text-decoration:none">My Hero</a>.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer" style="background:rgba(0,0,0,.6); border-top:1px solid rgba(124,252,0,.35);">
+      <div class="container">
+        <div class="social-links d-flex justify-content-center" style="gap:14px">
+          <a href="https://www.facebook.com/shena.ellis" target="_blank" class="bi bi-facebook" style="color:#eeeeee"></a>
+          <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" class="bi bi-instagram" style="color:#eeeeee"></a>
+        </div>
+
+        <div class="container" style="text-align:center">
+          <div class="copyright" style="margin-top:10px">
+            <span>Copyright</span> <strong class="px-1 sitename">Shena Ellis</strong> <span>All Rights Reserved</span>
+          </div>
+          <div class="footer-links" style="margin-top:6px">
+            <a href="sitemap.html" style="color:#7cfc00; font-weight:600; text-decoration:none"
+               onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
+               onmouseout="this.style.color='#7cfc00'; this.style.textDecoration='none';">
+              Site Map
+            </a>
+          </div>
+          <div class="credits" style="margin-top:6px">
+            Designed by <a href="https://bootstrapmade.com/" style="color:#7cfc00; text-decoration:none">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /.page-chrome -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" style="background:#7cfc00; color:#062b06">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS (template) -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

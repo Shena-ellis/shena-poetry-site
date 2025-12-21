@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Poetry</title>
+  <meta name="description" content="Poems by Shena Ellis" />
+  <meta name="keywords" content="poetry, poems, Shena Ellis" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_3.png" />
+  <link rel="apple-touch-icon" href="assets/img/s_favicon.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- Page-scoped styles (Quadriplegia-style cards + consistent sizing) -->
+  <style>
+    :root { --accent: #32cd32; }
+
+    /* Offset for fixed header (tweak if your header height changes) */
+    .offset-for-header { padding-top: 90px; }
+
+    /* Grid */
+    .poetry-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 576px) { .poetry-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 992px) { .poetry-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    /* Card base: uses background image + overlay, like Quadriplegia */
+    .image-card {
+      position: relative;
+      color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 20px;
+      background: #111 center/cover no-repeat;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: transform .3s ease, box-shadow .3s ease;
+      aspect-ratio: 16 / 9;
+    }
+    @supports not (aspect-ratio: 1 / 1) {
+      .image-card {
+        height: 0;
+        padding-top: 56.25%;
+      }
+      .image-card > .card-inner,
+      .image-card > .bg-overlay {
+        position: absolute; inset: 0;
+      }
+      .image-card > .card-inner { padding: 20px; }
+    }
+
+    /* Overlay + hover effect */
+    .image-card .bg-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.45);
+      border-radius: 10px;
+      transition: background .3s ease;
+      pointer-events: none;
+    }
+    .image-card .card-inner { position: relative; z-index: 1; }
+    .image-card .icon { color: #fff; }
+
+    .image-card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+    .image-card:hover .bg-overlay { background: rgba(50,205,50,0.55); }
+    .image-card:hover h3,
+    .image-card:hover p,
+    .image-card:hover a,
+    .image-card:hover .icon { color: var(--accent) !important; }
+
+    .image-card h3,
+    .image-card p { text-shadow: 0 1px 2px rgba(0,0,0,0.65); }
+
+    .page-title h1 { text-shadow: 0 2px 8px rgba(0,0,0,.4); }
+  </style>
+</head>
+
+<body class="services-page">
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Poetry</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="my_story.html">My Story</a></li>
+          <li><a href="my_hero.html">My Hero</a></li>
+          <li><a href="the_crash.html">The Crash</a></li>
+          <li><a href="quadriplegia.html">Quadriplegia</a></li>
+ 
+  <a href="poetry.html" class="rainbow-text" style="
+    font-weight:bold;
+    text-decoration:none;
+    background:linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    background-size:400% 400%;
+    animation:rainbowShift 8s ease infinite;
+    display:inline-block;
+  ">
+    Poetry
+  </a>
+
+  <style>
+    @keyframes rainbowShift {
+      0% { background-position:0% 50%; }
+      50% { background-position:100% 50%; }
+      100% { background-position:0% 50%; }
+    }
+  </style>
+</li>
+        
+   
+             
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main offset-for-header">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Poetry</h1>
+              <p class="mb-0" 🔋</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Poetry</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+    <!-- /Page Title -->
+
+    <!-- Poetry Cards -->
+    <section id="poetry" class="section">
+      <div class="container">
+        <div class="poetry-grid">
+
+          <!-- Paper Planes (image filename matches HTML: paper_planes.html → paper_planes.jpg) -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/paper_planes.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class="card-inner">
+            
+              <a href="paper_planes.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>Paper Planes</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- I'm A Rhymesayer -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/im_a_rhymesayer.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class="card-inner">
+    
+              <a href="im_a_rhymesayer.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>I'm A Rhymesayer</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Deep Definitive Decision (spell like your HTML) -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/deep_difinitive_decision.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class="card-inner">
+           
+              <a href="deep_difinitive_decision.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>Deep Definitive Decision</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Lost at Sea -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/lost_at_sea.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class.card-inner">
+          
+              <a href="lost_at_sea.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>Lost at Sea</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- I've Only Gone Insane -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/ive_only_gone_insane.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class="card-inner">
+
+              <a href="ive_only_gone_insane.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>I've Only Gone Insane</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- I Am Like Water -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/i_am_like_water.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class="card-inner">
+              
+              <a href="i_am_like_water.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>I Am Like Water</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- I Am Like Ice -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/i_am_like_ice.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class="card-inner">
+              
+              <a href="i_am_like_ice.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>I Am Like Ice</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+          <!-- I'm Like The Past -->
+          <div class="service-item image-card"
+               style="background: url('assets/img/im_like_the_past.jpg') center/cover no-repeat;">
+            <div class="bg-overlay"></div>
+            <div class="card-inner">
+              
+              <a href="im_like_the_past.html" class="stretched-link" style="color:#fff; text-decoration:none;">
+                <h3>I'm Like The Past</h3>
+              </a>
+              <p></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /Poetry Cards -->
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Personal</h3>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.facebook.com/shena.ellis" target="_blank" class="bi bi-facebook"></a>
+        <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" class="bi bi-instagram"></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="footer-links">
+          <a href="sitemap.html"
+             style="color: limegreen; font-weight:600; text-decoration:none;"
+             onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
+             onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';">
+            Site Map
+          </a>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

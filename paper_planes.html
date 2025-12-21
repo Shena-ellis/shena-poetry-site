@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Paper Planes</title>
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/s_favicon_2.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/s_favicon_3.png"
+    />
+    <link rel="apple-touch-icon" href="assets/img/s_favicon.png" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Your theme CSS (leave as-is) -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Minimal inline CSS so you don't have to edit files -->
+    <style>
+      /* Parallax backdrop that shows the ENTIRE image */
+      #bg-layer {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        display: grid;
+        place-items: center;
+        background: #000;
+        pointer-events: none;
+      }
+      #bg-layer img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+      }
+      /* Soft vignette for legibility */
+      #bg-vignette {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          120% 80% at 50% 20%,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.28) 55%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+      }
+
+      /* Keep everything transparent so the image shows through */
+      html,
+      body {
+        background: transparent !important;
+      }
+      .page-chrome,
+      .main,
+      .page-title,
+      #footer,
+      header,
+      nav,
+      section {
+        background: transparent !important;
+      }
+
+      /* Header: on top + readable over image */
+      #header.header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0)
+        );
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: saturate(130%) blur(4px);
+      }
+      #header .sitename,
+      #header a {
+        color: #fff !important;
+      }
+
+      /* Mobile nav overlay style */
+      .mobile-nav-active #navmenu {
+        position: fixed;
+        inset: 0 0 0 auto;
+        width: 280px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 80px 24px 24px;
+        box-shadow: -6px 0 20px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
+        z-index: 10000;
+      }
+      .mobile-nav-active body {
+        overflow: hidden;
+      }
+
+      /* Toggle icon appearance when open */
+      .mobile-nav-active .mobile-nav-toggle {
+        color: #32cd32 !important;
+      }
+
+      /* Dropdowns: show children on click (mobile) / hover (desktop) */
+      .navmenu .dropdown > a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .navmenu .dropdown > ul {
+        display: none;
+        position: static;
+        padding-left: 0;
+        margin-top: 8px;
+      }
+      .navmenu .dropdown.dropdown-active > ul {
+        display: block;
+      }
+      @media (min-width: 1200px) {
+        #navmenu ul {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+        }
+        .navmenu .dropdown {
+          position: relative;
+        }
+        .navmenu .dropdown > ul {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          min-width: 220px;
+          background: rgba(0, 0, 0, 0.85);
+          padding: 10px 0;
+          border-radius: 8px;
+        }
+        .navmenu .dropdown:hover > ul {
+          display: block;
+        }
+        .navmenu .dropdown > ul li a {
+          white-space: nowrap;
+          display: block;
+          padding: 8px 16px;
+          color: #fff;
+        }
+        .navmenu .dropdown > ul li a:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+      }
+
+      /* Content floats above background */
+      .page-chrome {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+      }
+
+      /* Poem styling */
+      .float-content {
+        color: #fff;
+        text-align: center;
+        padding-top: 120px; /* room for fixed header */
+        padding-bottom: 120px;
+      }
+      .float-content h1 {
+        margin-bottom: 24px;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+      }
+      .poem {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 0 20px;
+        font-size: 1.18rem;
+        line-height: 1.9;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+      }
+
+      /* Make nav links readable atop dark bg */
+      #navmenu a {
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body class="service-details-page">
+    <!-- FIXED BACKGROUND IMAGE -->
+    <div id="bg-layer" aria-hidden="true">
+      <!-- Change filename if yours differs -->
+      <img src="assets/img/paper_planes.jpg" alt="Paper Planes background" />
+    </div>
+    <div id="bg-vignette" aria-hidden="true"></div>
+
+    <!-- FOREGROUND -->
+    <div class="page-chrome">
+      <header id="header" class="header d-flex align-items-center fixed-top">
+        <div
+          class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+        >
+          <a href="index.html" class="logo d-flex align-items-center">
+            <h1 class="sitename">Poetry</h1>
+          </a>
+
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="my_story.html">My Story</a></li>
+              <li><a href="my_hero.html">My Hero</a></li>
+              <li><a href="the_crash.html">The Crash</a></li>
+              <li><a href="quadriplegia.html">Quadriplegia</a></li>
+              <li><a href="poetry.html" class="active">Poetry</a></li>
+
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <i
+              class="mobile-nav-toggle d-xl-none bi bi-list"
+              aria-label="Toggle navigation"
+              role="button"
+              tabindex="0"
+            ></i>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="float-content">
+          <h1>Paper Planes</h1>
+          <div class="poem">
+            This is not a tale of sorrow <br />
+            This is not a beg or plea <br /><br />
+
+            It does not take place tomorrow <br />
+            And this time will never be <br /><br />
+
+            It’s from deep beneath the surface <br />
+            And its shallow just the same <br />
+            These words do not serve a purpose <br />
+            And the author has no name <br /><br />
+
+            These do not attempt prediction <br />
+            This is not “I told you so” <br />
+            This is not a contradiction <br />
+            It’s not something that you know <br /><br />
+
+            You will not find a proposal <br />
+            And there will be no “Ah-Ha!” <br />
+            This is not at your disposal— <br />
+            And this thing cannot be bought <br /><br />
+
+            It was written alone in a room full of critics <br />
+            And no one will read it, and nor do I care <br />
+            Because I've just decided what I think I'll do with it— <br />
+            Fold it into an airplane <br />
+            And toss it in the air <br />
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer" class="footer dark-background">
+        <div class="container text-center">
+          <div class="social-links d-flex justify-content-center">
+            <a
+              href="https://www.facebook.com/shena.ellis"
+              target="_blank"
+              class="bi bi-facebook"
+            ></a>
+            <a
+              href="https://www.instagram.com/mermangel_maghillicuddie"
+              target="_blank"
+              class="bi bi-instagram"
+            ></a>
+          </div>
+          <div class="copyright mt-3">
+            <span>Copyright</span>
+            <strong class="px-1 sitename">Shena Ellis</strong>
+            <span>All Rights Reserved</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Vendor JS (Bootstrap) -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tiny inline nav script so you don't need assets/js/main.js -->
+    <script>
+      (function () {
+        const body = document.body;
+        const nav = document.querySelector("#navmenu");
+        const toggle = document.querySelector(".mobile-nav-toggle");
+
+        // Open/close mobile nav
+        function toggleNav() {
+          body.classList.toggle("mobile-nav-active");
+          toggle.classList.toggle("bi-list");
+          toggle.classList.toggle("bi-x");
+        }
+        toggle?.addEventListener("click", toggleNav);
+        toggle?.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleNav();
+          }
+        });
+
+        // Close on outside click (when menu open)
+        document.addEventListener("click", (e) => {
+          if (!body.classList.contains("mobile-nav-active")) return;
+          const clickInside =
+            nav.contains(e.target) || toggle.contains(e.target);
+          if (!clickInside) toggleNav();
+        });
+
+        // Dropdowns: click to expand in mobile
+        nav.querySelectorAll(".dropdown > a").forEach((a) => {
+          a.addEventListener("click", (e) => {
+            // Only intercept on mobile (same logic as template)
+            if (window.getComputedStyle(toggle).display !== "none") {
+              e.preventDefault();
+              a.parentElement.classList.toggle("dropdown-active");
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
