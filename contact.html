@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Contact - Personal Bootstrap Template</title>
+    <title>Contact - Shena Ellis</title>
+
     <meta
       name="description"
       content="Contact page for Shena — Big Sur poet and builder of beautiful things."
@@ -11,18 +12,8 @@
     <meta name="keywords" content="contact, email, bigsurpoet, Shena Ellis" />
 
     <!-- Favicons -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/img/s_favicon_2.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/img/s_favicon_3.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_3.png" />
     <link rel="apple-touch-icon" href="assets/img/s_favicon.png" />
 
     <!-- Fonts -->
@@ -34,24 +25,23 @@
     />
 
     <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Page-scoped helpers -->
     <style>
+      /* Push content below the fixed header */
+      .offset-for-header {
+        padding-top: 90px;
+      }
+
+      /* Rainbow link class (keep this if you want it local to the page) */
       .rainbow-text {
         font-weight: bold;
         text-decoration: none;
@@ -63,15 +53,44 @@
         animation: rainbowShift 8s ease infinite;
         display: inline-block;
       }
-
       @keyframes rainbowShift {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
       }
     </style>
+  </head>
 
-    <main class="main">
+  <body class="contact-page">
+    <!-- Header (COPY from Services page) -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center"></a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="my_story.html">My Story</a></li>
+            <li><a href="my_hero.html">My Hero</a></li>
+            <li><a href="the_crash.html">The Crash</a></li>
+
+            <li>
+              <a href="quadriplegia.html" class="rainbow-text">Quadriplegia</a>
+            </li>
+
+            <li><a href="poetry.html">Poetry</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Toggle menu"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main offset-for-header">
       <!-- Page Title -->
       <div class="page-title" data-aos="fade">
         <div class="heading">
@@ -80,13 +99,14 @@
               <div class="col-lg-8">
                 <h1>Get In Touch</h1>
                 <p class="mb-0">
-                  To read more of my poetry, send me an email <br />I have so
-                  much more to share
+                  To read more of my poetry, send me an email <br />
+                  I have so much more to share
                 </p>
               </div>
             </div>
           </div>
         </div>
+
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <div class="container">
             <ol>
@@ -103,93 +123,51 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
             <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <i
-                  class="icon bi bi-geo-alt flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+              <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+                <i class="icon bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Address</h3>
                   <p>PO Box 97<br />San Simeon, CA. 93452</p>
                 </div>
               </div>
             </div>
-            <!-- End Info Item -->
 
             <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i
-                  class="icon bi bi-telephone flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+              <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+                <i class="icon bi bi-telephone flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Text Me</h3>
                   <p>+1 (559) 666-0836</p>
                 </div>
               </div>
             </div>
-            <!-- End Info Item -->
 
             <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i
-                  class="icon bi bi-envelope flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+              <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+                <i class="icon bi bi-envelope flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Email Me</h3>
-                  <p>
-                    <a href="mailto:bigsurpoet@gmail.com"
-                      >bigsurpoet@gmail.com</a
-                    >
-                  </p>
+                  <p><a href="mailto:bigsurpoet@gmail.com">bigsurpoet@gmail.com</a></p>
                 </div>
               </div>
             </div>
-            <!-- End Info Item -->
 
             <div class="col-md-6">
-              <div
-                class="info-item d-flex align-items-center"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i
-                  class="icon bi bi-share flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+              <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+                <i class="icon bi bi-share flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Social Profiles</h3>
                   <div class="social-links">
-                    <a
-                      href="https://www.facebook.com/shena.ellis"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-facebook" aria-label="Facebook"></i
-                    ></a>
-                    <a
-                      href="https://www.instagram.com/mermangel_maghillicuddie"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-instagram" aria-label="Instagram"></i
-                    ></a>
+                    <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener">
+                      <i class="bi bi-facebook" aria-label="Facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener">
+                      <i class="bi bi-instagram" aria-label="Instagram"></i>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- End Info Item -->
           </div>
 
           <!-- Contact Form (Web3Forms) -->
@@ -202,106 +180,37 @@
             data-aos-delay="600"
             novalidate
           >
-            <!-- REQUIRED: your Web3Forms access key -->
-            <input
-              type="hidden"
-              name="access_key"
-              value="b95c38ef-56ee-464b-81e8-b35d0799ecb0"
-            />
+            <input type="hidden" name="access_key" value="b95c38ef-56ee-464b-81e8-b35d0799ecb0" />
+            <input type="hidden" name="subject" value="New message from your website" />
+            <input type="hidden" name="from_name" value="Website Contact Form" />
 
-            <!-- Optional meta for your email subject & from name -->
-            <input
-              type="hidden"
-              name="subject"
-              value="New message from your website"
-            />
-            <input
-              type="hidden"
-              name="from_name"
-              value="Website Contact Form"
-            />
-
-            <!-- (Optional) After-submit redirect -->
-            <!-- <input type="hidden" name="redirect" value="https://your-domain.com/thanks.html"> -->
-
-            <!-- Honeypot (spam protection) -->
-            <input
-              type="checkbox"
-              name="botcheck"
-              class="d-none"
-              tabindex="-1"
-              autocomplete="off"
-            />
+            <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off" />
 
             <div class="row gy-4">
               <div class="col-md-6">
-                <label for="name" class="form-label visually-hidden"
-                  >Your Name</label
-                >
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  placeholder="Your Name"
-                  required
-                />
+                <label for="name" class="form-label visually-hidden">Your Name</label>
+                <input id="name" type="text" name="name" class="form-control" placeholder="Your Name" required />
               </div>
 
               <div class="col-md-6">
-                <label for="email" class="form-label visually-hidden"
-                  >Your Email</label
-                >
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  required
-                />
+                <label for="email" class="form-label visually-hidden">Your Email</label>
+                <input id="email" type="email" name="email" class="form-control" placeholder="Your Email" required />
               </div>
 
               <div class="col-md-12">
-                <label for="user_subject" class="form-label visually-hidden"
-                  >Subject</label
-                >
-                <input
-                  id="user_subject"
-                  type="text"
-                  name="user_subject"
-                  class="form-control"
-                  placeholder="Subject"
-                  required
-                />
+                <label for="user_subject" class="form-label visually-hidden">Subject</label>
+                <input id="user_subject" type="text" name="user_subject" class="form-control" placeholder="Subject" required />
               </div>
 
               <div class="col-md-12">
-                <label for="message" class="form-label visually-hidden"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  class="form-control"
-                  name="message"
-                  rows="6"
-                  placeholder="Message"
-                  required
-                ></textarea>
+                <label for="message" class="form-label visually-hidden">Message</label>
+                <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
               </div>
 
               <div class="col-md-12 text-center">
                 <div class="loading" style="display: none">Loading</div>
-                <div
-                  class="error-message alert alert-danger py-2 px-3"
-                  role="alert"
-                  style="display: none"
-                ></div>
-                <div
-                  class="sent-message alert alert-success py-2 px-3"
-                  role="status"
-                  style="display: none"
-                >
+                <div class="error-message alert alert-danger py-2 px-3" role="alert" style="display: none"></div>
+                <div class="sent-message alert alert-success py-2 px-3" role="status" style="display: none">
                   Your message has been sent. Thank you!
                 </div>
 
@@ -311,36 +220,26 @@
               </div>
             </div>
           </form>
-          <!-- End Contact Form -->
         </div>
       </section>
-      <!-- /Contact Section -->
     </main>
 
+    <!-- Footer -->
     <footer id="footer" class="footer dark-background">
       <div class="container">
         <h3 class="sitename">Social Media</h3>
-        <p></p>
         <div class="social-links d-flex justify-content-center">
-          <a
-            href="https://www.facebook.com/shena.ellis"
-            target="_blank"
-            rel="noopener"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/mermangel_maghillicuddie"
-            target="_blank"
-            rel="noopener"
-            ><i class="bi bi-instagram"></i
-          ></a>
+          <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
         </div>
+
         <div class="container">
           <div class="copyright">
             <span>Copyright</span>
-            <strong class="px-1 sitename">Personal</strong>
+            <strong class="px-1 sitename">Shena Ellis</strong>
             <span>All Rights Reserved</span>
           </div>
+
           <div class="footer-links">
             <a
               href="sitemap.html"
@@ -351,6 +250,7 @@
               Site Map
             </a>
           </div>
+
           <div class="credits">
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
@@ -359,13 +259,9 @@
     </footer>
 
     <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      aria-label="Scroll to top"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
     <!-- Preloader -->
     <div id="preloader" aria-hidden="true"></div>
@@ -381,7 +277,7 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <!-- Web3Forms: AJAX submit handler for pretty alerts -->
+    <!-- Web3Forms AJAX submit handler -->
     <script>
       (function () {
         const form = document.getElementById("contact-form");
@@ -391,12 +287,8 @@
         const sent = form.querySelector(".sent-message");
         const error = form.querySelector(".error-message");
 
-        const show = (el) => {
-          if (el) el.style.display = "";
-        };
-        const hide = (el) => {
-          if (el) el.style.display = "none";
-        };
+        const show = (el) => el && (el.style.display = "");
+        const hide = (el) => el && (el.style.display = "none");
 
         form.addEventListener("submit", async function (e) {
           e.preventDefault();
@@ -419,10 +311,7 @@
               show(sent);
               form.reset();
             } else {
-              error.textContent =
-                data && data.message
-                  ? data.message
-                  : "Submission failed. Please try again.";
+              error.textContent = data && data.message ? data.message : "Submission failed. Please try again.";
               show(error);
             }
           } catch (err) {
