@@ -34,61 +34,17 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <!-- Page-scoped helpers -->
+    <!-- OPTIONAL: only keep this if you have NOT moved offset-for-header into main.css yet -->
+    <!--
     <style>
-      /* Push content below the fixed header */
-      .offset-for-header {
-        padding-top: 90px;
-      }
-
-      /* Rainbow link class (keep this if you want it local to the page) */
-      .rainbow-text {
-        font-weight: bold;
-        text-decoration: none;
-        background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        background-size: 400% 400%;
-        animation: rainbowShift 8s ease infinite;
-        display: inline-block;
-      }
-      @keyframes rainbowShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
+      .offset-for-header { padding-top: 90px; }
+      @media (max-width: 1199px) { .offset-for-header { padding-top: 76px; } }
     </style>
+    -->
   </head>
 
   <body class="contact-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-  <div
-    class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
-  >
-    <a href="index.html" class="logo d-flex align-items-center"></a>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="my_story.html">My Story</a></li>
-        <li><a href="my_hero.html">My Hero</a></li>
-        <li><a href="the_crash.html">The Crash</a></li>
-
-        <li>
-          <a href="quadriplegia.html" class="rainbow-text">Quadriplegia</a>
-        </li>
-
-        <li><a href="poetry.html">Poetry</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-      </ul>
-
-      <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Toggle menu"></i>
-    </nav>
-  </div>
-</header>
-    <!-- Header (COPY from Services page) -->
+    <!-- Header / Nav -->
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
@@ -210,6 +166,7 @@
             <input type="hidden" name="subject" value="New message from your website" />
             <input type="hidden" name="from_name" value="Website Contact Form" />
 
+            <!-- Honeypot -->
             <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off" />
 
             <div class="row gy-4">
@@ -225,18 +182,42 @@
 
               <div class="col-md-12">
                 <label for="user_subject" class="form-label visually-hidden">Subject</label>
-                <input id="user_subject" type="text" name="user_subject" class="form-control" placeholder="Subject" required />
+                <input
+                  id="user_subject"
+                  type="text"
+                  name="user_subject"
+                  class="form-control"
+                  placeholder="Subject"
+                  required
+                />
               </div>
 
               <div class="col-md-12">
                 <label for="message" class="form-label visually-hidden">Message</label>
-                <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  name="message"
+                  rows="6"
+                  placeholder="Message"
+                  required
+                ></textarea>
               </div>
 
               <div class="col-md-12 text-center">
                 <div class="loading" style="display: none">Loading</div>
-                <div class="error-message alert alert-danger py-2 px-3" role="alert" style="display: none"></div>
-                <div class="sent-message alert alert-success py-2 px-3" role="status" style="display: none">
+
+                <div
+                  class="error-message alert alert-danger py-2 px-3"
+                  role="alert"
+                  style="display: none"
+                ></div>
+
+                <div
+                  class="sent-message alert alert-success py-2 px-3"
+                  role="status"
+                  style="display: none"
+                >
                   Your message has been sent. Thank you!
                 </div>
 
@@ -246,6 +227,7 @@
               </div>
             </div>
           </form>
+          <!-- End Contact Form -->
         </div>
       </section>
     </main>
@@ -254,9 +236,14 @@
     <footer id="footer" class="footer dark-background">
       <div class="container">
         <h3 class="sitename">Social Media</h3>
+
         <div class="social-links d-flex justify-content-center">
-          <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener">
+            <i class="bi bi-instagram"></i>
+          </a>
         </div>
 
         <div class="container">
@@ -269,9 +256,7 @@
           <div class="footer-links">
             <a
               href="sitemap.html"
-              style="color: limegreen; font-weight: 600; text-decoration: none"
-              onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
-              onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';"
+              class="sitemap-link"
             >
               Site Map
             </a>
@@ -285,7 +270,12 @@
     </footer>
 
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      aria-label="Scroll to top"
+    >
       <i class="bi bi-arrow-up-short"></i>
     </a>
 
@@ -337,7 +327,10 @@
               show(sent);
               form.reset();
             } else {
-              error.textContent = data && data.message ? data.message : "Submission failed. Please try again.";
+              error.textContent =
+                data && data.message
+                  ? data.message
+                  : "Submission failed. Please try again.";
               show(error);
             }
           } catch (err) {
