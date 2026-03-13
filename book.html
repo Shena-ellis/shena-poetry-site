@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - Personal Bootstrap Template</title>
+  <title>Index — My Homepage</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_3.png">
+  <link rel="apple-touch-icon" href="assets/img/s_favicon.png"> <!-- FIXED missing closing > -->
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,6 +27,26 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Page-specific small styles (moved out of <li>) -->
+  <style>
+    .rainbow-text {
+      font-weight: 700;
+      text-decoration: none;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 400% 400%;
+      animation: rainbowShift 8s ease infinite;
+      display: inline-block;
+    }
+    @keyframes rainbowShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: Personal
   * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
@@ -36,79 +56,93 @@
   ======================================================== -->
 </head>
 
-<body class="starter-page-page">
+<body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-````````````
+
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Personal</h1>
+        <h1 class="sitename"> </h1>
       </a>
 
-       <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          
-         <li><a href="the_crash.html">The Crash</a></li>
+          <li><a href="book.html" class="rainbow-text">From When I Could Walk</a></li>
+          <li><a href="my_hero.html">My Hero</a></li>
+          <li><a href="the_crash.html">The Crash</a></li>
           <li><a href="quadriplegia.html">Quadriplegia</a></li>
           <li><a href="poetry.html">Poetry</a></li>
-       
-          
+          <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+
+        <!-- Mobile nav toggle (the missing piece on iPhone) -->
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-    </div><!-- End Page Title -->
+    </div>
+  </header>
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
+  <main class="main">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Starter Section</h2>
-        <div><span>Check Our</span> <span class="description-title">Starter Section</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/book-cover.jpeg" alt="" data-aos="fade-in">
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h2>Shena M. Ellis</h2>
+     <p class="hero-line">
+  I am
+  <span class="moving-words">
+    <span
+      class="typed"
+      data-typed-items="a Student, a Quadriplegic, a Survivor, a Poet, starting over from scratch, a Friend, a Local, an Inspiration, trying to find my way, Adapting">
+    </span>
+  </span>
+  <span class="typed-cursor typed-cursor--blink"></span>
+</p>
       </div>
-
-    </section><!-- /Starter Section Section -->
+      <!-- removed an extra stray </div> that closed nothing -->
+    </section>
+    <!-- /Hero Section -->
 
   </main>
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <h4 class="sitename">This was not meant to publush</h4>
+      <p>Nor meant to be read. Just a means to uncover <br> the mess in this head</p>
+
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/shena.ellis" target="_blank" class="bi bi-facebook" aria-label="Facebook"></a>
+        <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" class="bi bi-instagram" aria-label="Instagram"></a>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+
+      <div class="copyright mt-3">
+        <span>Copyright</span> <strong class="px-1 sitename">Shena Ellis</strong> <span>All Rights Reserved</span>
+      </div>
+
+      <div class="footer-links mt-2">
+        <a href="sitemap.html"
+           style="color: limegreen; font-weight:600; text-decoration:none;"
+           onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
+           onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';">
+          Site Map
+        </a>
+      </div>
+
+      <div class="credits mt-2">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -127,7 +161,5 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
