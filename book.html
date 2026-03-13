@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index — My Homepage</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>From When I Could Walk</title>
+  <meta name="description" content="From When I Could Walk by Shena M. Ellis">
+  <meta name="keywords" content="Shena Ellis, book, memoir, poetry, survivor">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_3.png">
-  <link rel="apple-touch-icon" href="assets/img/s_favicon.png"> <!-- FIXED missing closing > -->
+  <link rel="apple-touch-icon" href="assets/img/s_favicon.png">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,7 +27,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Page-specific small styles (moved out of <li>) -->
   <style>
     .rainbow-text {
       font-weight: 700;
@@ -40,10 +39,58 @@
       animation: rainbowShift 8s ease infinite;
       display: inline-block;
     }
+
     @keyframes rainbowShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    .hero-line {
+      margin-bottom: 0;
+    }
+
+    .amazon-book-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.85rem 1.4rem;
+      border: 2px solid #7cfc00;
+      border-radius: 999px;
+      color: #ffffff;
+      font-family: var(--nav-font);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .amazon-book-btn:hover,
+    .amazon-book-btn:focus {
+      background: #7cfc00;
+      color: #000000;
+      box-shadow: 0 0 18px rgba(124, 252, 0, 0.45);
+      text-decoration: none;
+    }
+
+    .book-feedback-link {
+      margin-top: 1rem;
+    }
+
+    .book-feedback-link a {
+      color: #ffffff;
+      font-family: var(--nav-font);
+      font-size: 1rem;
+      text-decoration: underline;
+      text-decoration-color: #7cfc00;
+      text-underline-offset: 0.22em;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .book-feedback-link a:hover,
+    .book-feedback-link a:focus {
+      color: #7cfc00;
+      text-shadow: 0 0 10px rgba(124, 252, 0, 0.35);
     }
   </style>
 
@@ -62,8 +109,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename"> </h1>
+        <h1 class="sitename"></h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -79,7 +125,6 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <!-- Mobile nav toggle (the missing piece on iPhone) -->
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -90,21 +135,35 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-      <img src="assets/img/book-cover.jpeg" alt="" data-aos="fade-in">
+      <img src="assets/img/book-cover.jpeg" alt="Book cover for From When I Could Walk" data-aos="fade-in">
+
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h2>Shena M. Ellis</h2>
-     <p class="hero-line">
-  I am
-  <span class="moving-words">
-    <span
-      class="typed"
-      data-typed-items="a Student, a Quadriplegic, a Survivor, a Poet, starting over from scratch, a Friend, a Local, an Inspiration, trying to find my way, Adapting">
-    </span>
-  </span>
-  <span class="typed-cursor typed-cursor--blink"></span>
-</p>
+
+        <p class="hero-line">
+          This
+          <span class="moving-words">
+            <span
+              class="typed"
+              data-typed-items="is who I was,is who I am,is what survived,is a book of poetry,is a piece of me">
+            </span>
+          </span>
+          <span class="typed-cursor typed-cursor--blink"></span>
+        </p>
+
+        <a
+          href="https://a.co/d/0iRr1Dsa"
+          class="amazon-book-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Buy From When I Could Walk on Amazon">
+          Buy the Book on Amazon
+        </a>
+
+        <p class="book-feedback-link">
+          <a href="contact.html">Please let me know what my book made you feel.</a>
+        </p>
       </div>
-      <!-- removed an extra stray </div> that closed nothing -->
     </section>
     <!-- /Hero Section -->
 
@@ -112,21 +171,23 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h4 class="sitename">This was not meant to publush</h4>
+      <h4 class="sitename">This was not meant to publish</h4>
       <p>Nor meant to be read. Just a means to uncover <br> the mess in this head</p>
 
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/shena.ellis" target="_blank" class="bi bi-facebook" aria-label="Facebook"></a>
-        <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" class="bi bi-instagram" aria-label="Instagram"></a>
+        <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener noreferrer" class="bi bi-facebook" aria-label="Facebook"></a>
+        <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener noreferrer" class="bi bi-instagram" aria-label="Instagram"></a>
       </div>
 
       <div class="copyright mt-3">
-        <span>Copyright</span> <strong class="px-1 sitename">Shena Ellis</strong> <span>All Rights Reserved</span>
+        <span>Copyright</span>
+        <strong class="px-1 sitename">Shena Ellis</strong>
+        <span>All Rights Reserved</span>
       </div>
 
       <div class="footer-links mt-2">
         <a href="sitemap.html"
-           style="color: limegreen; font-weight:600; text-decoration:none;"
+           style="color: limegreen; font-weight: 600; text-decoration: none;"
            onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
            onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';">
           Site Map

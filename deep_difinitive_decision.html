@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Deep Definitive Decision</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Deep Definitive Decision poem by Shena Ellis" />
+  <meta name="keywords" content="Shena Ellis, poetry, poem, Deep Definitive Decision" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png">
@@ -16,7 +16,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,110 +29,179 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
-    /* --- Parallax backdrop (shows ENTIRE image, never cropped) --- */
+    .rainbow-text {
+      font-weight: 700;
+      text-decoration: none;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 400% 400%;
+      animation: rainbowShift 8s ease infinite;
+      display: inline-block;
+    }
+
+    @keyframes rainbowShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     #bg-layer {
       position: fixed;
       inset: 0;
-      z-index: 0;             /* behind content, above page background */
+      z-index: 0;
       display: grid;
       place-items: center;
-      background: #000;       /* letterbox bars */
+      background: #000;
       pointer-events: none;
     }
+
     #bg-layer img {
       width: 100vw;
       height: 100vh;
-      object-fit: contain;    /* show the WHOLE image */
+      object-fit: contain;
       object-position: center;
       display: block;
     }
+
     #bg-vignette {
-      position: fixed; inset: 0;
-      z-index: 0; pointer-events: none;
-      background: radial-gradient(120% 80% at 50% 20%, rgba(0,0,0,0) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,.6) 100%);
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(
+        120% 80% at 50% 20%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.28) 55%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
     }
 
-    /* Ensure nothing paints over our backdrop */
-    html, body { background: transparent !important; }
-    .main, .page-title, .service-details, #footer, header, nav, section {
+    html,
+    body {
       background: transparent !important;
     }
 
-    /* Content floats over the image */
-    .page-chrome { position: relative; z-index: 1; color: #fff; }
+    .main,
+    .page-title,
+    .service-details,
+    #footer,
+    header,
+    nav,
+    section {
+      background: transparent !important;
+    }
 
-    /* Translucent header so the image shows through */
+    .page-chrome {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+    }
+
     #header.header {
-      background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,0));
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: saturate(130%) blur(4px);
     }
-    #header .sitename, #header a { color: #fff !important; }
 
-    /* Title & breadcrumb legibility */
+    #header .sitename,
+    #header a {
+      color: #fff !important;
+    }
+
     .page-title .heading h1,
-    .breadcrumbs * { color: #fff; text-shadow: 0 3px 10px rgba(0,0,0,.8); }
+    .breadcrumbs * {
+      color: #fff;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    }
 
-    /* Poem styling (floating layer) */
     .float-content {
       text-align: center;
-      padding-top: 120px;  /* room for fixed header */
+      padding-top: 120px;
       padding-bottom: 120px;
     }
-    .float-content h1 {
-      margin-bottom: 24px;
-      text-shadow: 0 4px 12px rgba(0,0,0,.9);
-    }
+
     .poem {
       max-width: 840px;
       margin: 0 auto;
       padding: 0 20px;
       font-size: 1.18rem;
       line-height: 1.9;
-      text-shadow: 0 2px 8px rgba(0,0,0,.85);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+    }
+
+    .footer-links a {
+      color: limegreen;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      color: #32cd32;
+      text-decoration: underline;
+    }
+
+    /* Optional polish for dropdown spacing */
+    .navmenu .dropdown ul li a {
+      white-space: normal;
+      line-height: 1.4;
     }
   </style>
 </head>
-  <a href="index.html" class="logo d-flex align-items-center" style="text-decoration:none;">
-  <h3 class="sitename" style="margin:0; font-size:1rem; font-weight:700; color:#7cfc00;">
 
-  </h3>
-</a>
 <body class="service-details-page">
-  <!-- Fixed background image (parallax) -->
+
   <div id="bg-layer" aria-hidden="true">
-    <!-- Change filename here if yours differs -->
     <img src="assets/img/deep_difinitive_decision.jpg" alt="Deep Definitive Decision background">
   </div>
   <div id="bg-vignette" aria-hidden="true"></div>
 
-  <!-- Everything below floats above the image -->
   <div class="page-chrome">
+
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
         <a href="index.html" class="logo d-flex align-items-center">
-          <h1 class="sitename">Poetry</h1>
+          <h1 class="sitename"></h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="book.html" class="rainbow-text">From When I Could Walk</a></li>
             <li><a href="my_hero.html">My Hero</a></li>
             <li><a href="the_crash.html">The Crash</a></li>
             <li><a href="quadriplegia.html">Quadriplegia</a></li>
-            <li><a href="poetry.html" class="active">Poetry</a></li>
-          
 
+            <li class="dropdown">
+              <a href="poetry.html" class="active">
+                <span>Poetry</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul>
+                <li><a href="poetry.html">All Poetry</a></li>
+                <li><a href="deep_difinitive_decision.html" class="active">Deep Definitive Decision</a></li>
+                <li><a href="my_hero.html">My Hero</a></li>
+                <li><a href="book.html">From When I Could Walk</a></li>
+              </ul>
+            </li>
+
+            <li><a href="sitemap.html">Sitemap</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
+
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
+
       </div>
     </header>
 
     <main class="main">
-      <!-- Page Title -->
+
       <div class="page-title" data-aos="fade">
         <div class="heading">
           <div class="container">
@@ -143,18 +212,18 @@
             </div>
           </div>
         </div>
+
         <nav class="breadcrumbs">
           <div class="container">
             <ol>
               <li><a href="index.html">Home</a></li>
+              <li><a href="poetry.html">Poetry</a></li>
               <li class="current">Deep Definitive Decision</li>
             </ol>
           </div>
         </nav>
       </div>
-      <!-- End Page Title -->
 
-      <!-- Floating Poem Section -->
       <section id="service-details" class="service-details section">
         <div class="container">
           <div class="row gy-4">
@@ -195,39 +264,47 @@
           </div>
         </div>
       </section>
-      <!-- /Floating Poem Section -->
+
     </main>
 
     <footer id="footer" class="footer dark-background">
       <div class="container">
         <h4 class="sitename">Social Media</h4>
+
         <div class="social-links d-flex justify-content-center">
-          <a href="https://www.facebook.com/shena.ellis" target="_blank" class="bi bi-facebook"></a>
-          <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" class="bi bi-instagram"></a>
+          <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener noreferrer" class="bi bi-facebook" aria-label="Facebook"></a>
+          <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener noreferrer" class="bi bi-instagram" aria-label="Instagram"></a>
         </div>
-        <div class="container">
-          <div class="copyright">
-            <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
-          </div>
-          <div class="footer-links">
-            <a href="sitemap.html"
-               style="color: limegreen; font-weight:600; text-decoration:none;"
-               onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
-               onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';">
-              Site Map
-            </a>
-          </div>
+
+        <div class="copyright">
+          <span>Copyright</span>
+          <strong class="px-1 sitename">Shena Ellis</strong>
+          <span>All Rights Reserved</span>
+        </div>
+
+        <div class="footer-links mt-2">
+          <a href="sitemap.html">Site Map</a>
+        </div>
+
         <div class="credits">
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </footer>
-  </div><!-- /.page-chrome -->
 
-  <!-- Vendor JS -->
+  </div>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <div id="preloader"></div>
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script>AOS.init();</script>
-
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
