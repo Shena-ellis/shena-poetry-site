@@ -2,139 +2,287 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>My Hero — David</title>
-  <meta name="description" content="David — master carpenter, my fiancé, and the man who never left my side." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Hero - David</title>
+  <meta
+    name="description"
+    content="David - master carpenter, my fiance, and the man who never left my side."
+  />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_3.png">
-  <link rel="apple-touch-icon" href="assets/img/s_favicon.png">
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/img/s_favicon_2.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/img/s_favicon_3.png"
+  />
+  <link rel="apple-touch-icon" href="assets/img/s_favicon.png" />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Vendor CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link
+    href="assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link
+    href="assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
 
-  <!-- Site CSS (optional) -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Site CSS -->
+  <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Inline dark theme with lime accents -->
   <style>
     :root {
-      --lime: #32cd32;           /* lime green accent */
-      --lime-700: #26a326;       /* hover shade */
-      --ink: #0a0a0a;            /* corrected from typo */
+      --lime: #32cd32;
+      --lime-700: #26a326;
+      --ink: #0a0a0a;
       --text: #eeeeee;
       --muted: #bdbdbd;
       --panel: #111111;
-      --border: rgba(124, 252, 0, .35);
+      --border: rgba(124, 252, 0, 0.35);
     }
 
-    /* Base */
-    body { background: #000; color: var(--text); font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; }
-    a { color: var(--lime); text-decoration-color: rgba(50,205,50,.35); text-underline-offset: 3px; }
-    a:hover { color: #fff; text-decoration-color: var(--lime); }
-    .dark-background { background: #000; }
-    .section { padding: 3.5rem 0; }
-    :focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+    body {
+      background: #000;
+      color: var(--text);
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
 
-    /* Header */
-    header.header { background: var(--ink); border-bottom: 1px solid var(--border); }
-    .logo .sitename { color: #fff; font-weight: 800; letter-spacing: .4px; }
-    .navmenu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; align-items: center; }
-    .navmenu a { color: #eaeaea; text-decoration: none; padding: .25rem .5rem; border-radius: .5rem; }
-    .navmenu a:hover, .navmenu a:focus { background: rgba(50,205,50,.1); color: #fff; }
-    .navmenu a.active { color: var(--lime); font-weight: 600; border-bottom: 2px solid var(--lime); }
+    a {
+      color: var(--lime);
+      text-decoration-color: rgba(50, 205, 50, 0.35);
+      text-underline-offset: 3px;
+    }
 
-    /* Page title */
-    .page-title { background: radial-gradient(800px 500px at 90% -20%, rgba(50,205,50,.18), transparent 60%), linear-gradient(180deg, #0f1115 0%, #0b0d10 100%); border-bottom: 1px solid var(--border); }
-    .page-title .heading { padding: 3.5rem 0; }
-    .page-title h1 { text-shadow: 0 0 8px rgba(50,205,50,.5); font-weight: 800; }
-    .page-title p { color: var(--muted); }
+    a:hover {
+      color: #fff;
+      text-decoration-color: var(--lime);
+    }
 
-    /* Boxes */
-    .box { background: var(--panel); border: 1.5px solid var(--border); border-radius: 1rem; padding: 1.25rem; }
-    .subtitle { border-bottom: 3px solid var(--lime); display: inline-block; padding-bottom: 4px; margin: 0; }
+    .dark-background {
+      background: #000;
+    }
 
-    /* Images */
-    .hero-img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 15px rgba(50,205,50,.35); display: block; }
-    .img-cover { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .section {
+      padding: 3.5rem 0;
+    }
 
-    /* Highlights */
-    .highlight { color: var(--lime); font-weight: 700; }
+    :focus-visible {
+      outline: 3px solid var(--lime);
+      outline-offset: 2px;
+    }
 
-    /* Footer */
-    footer.footer { background: var(--ink); border-top: 1px solid var(--border); padding: 2.5rem 0; }
-    .footer .social-links a { font-size: 1.4rem; color: var(--muted); margin: 0 .5rem; }
-    .footer .social-links a:hover { color: var(--lime); }
+    header.header {
+      background: var(--ink);
+      border-bottom: 1px solid var(--border);
+    }
 
-    /* Helpers */
-    .lead-muted { color: var(--muted); }
+    .logo .sitename {
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
+    .navmenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .navmenu a {
+      color: #eaeaea;
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    .navmenu a:hover,
+    .navmenu a:focus {
+      background: rgba(50, 205, 50, 0.1);
+      color: #fff;
+    }
+
+    .navmenu a.active {
+      color: var(--lime);
+      font-weight: 600;
+      border-bottom: 2px solid var(--lime);
+    }
+
+    .page-title {
+      background:
+        radial-gradient(
+          800px 500px at 90% -20%,
+          rgba(50, 205, 50, 0.18),
+          transparent 60%
+        ),
+        linear-gradient(180deg, #0f1115 0%, #0b0d10 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-title .heading {
+      padding: 3.5rem 0;
+    }
+
+    .page-title h1 {
+      text-shadow: 0 0 8px rgba(50, 205, 50, 0.5);
+      font-weight: 800;
+    }
+
+    .page-title p {
+      color: var(--muted);
+    }
+
+    .box {
+      background: var(--panel);
+      border: 1.5px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    .subtitle {
+      border-bottom: 3px solid var(--lime);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin: 0;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(50, 205, 50, 0.35);
+      display: block;
+    }
+
+    .img-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .highlight {
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    footer.footer {
+      background: var(--ink);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
+    }
+
+    .footer .social-links a {
+      font-size: 1.4rem;
+      color: var(--muted);
+      margin: 0 0.5rem;
+    }
+
+    .footer .social-links a:hover {
+      color: var(--lime);
+    }
+
+    .lead-muted {
+      color: var(--muted);
+    }
+
+    .offset-for-header {
+      padding-top: 90px;
+    }
+
+    @keyframes rainbowShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
   </style>
 </head>
 
 <body class="resume-page">
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
+    <div
+      class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+    >
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
- 
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="my_story.html">My Story</a></li>
-        
-  <a href="my_hero.html" class="rainbow-text" style="
-    font-weight:bold;
-    text-decoration:none;
-    background:linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    background-size:400% 400%;
-    animation:rainbowShift 8s ease infinite;
-    display:inline-block;
-  ">
-    My Hero
-  </a>
-
-  <style>
-    @keyframes rainbowShift {
-      0% { background-position:0% 50%; }
-      50% { background-position:100% 50%; }
-      100% { background-position:0% 50%; }
-    }
-  </style>
-</li>
-</li>
-</li>
-         <li><a href="the_crash.html">The Crash</a></li>
+          <li>
+            <a
+              href="my_hero.html"
+              class="rainbow-text active"
+              style="
+                font-weight: bold;
+                text-decoration: none;
+                background: linear-gradient(
+                  90deg,
+                  red,
+                  orange,
+                  yellow,
+                  green,
+                  blue,
+                  indigo,
+                  violet
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                background-size: 400% 400%;
+                animation: rainbowShift 8s ease infinite;
+                display: inline-block;
+              "
+            >
+              My Hero
+            </a>
+          </li>
+          <li><a href="the_crash.html">The Crash</a></li>
           <li><a href="quadriplegia.html">Quadriplegia</a></li>
           <li><a href="poetry.html">Poetry</a></li>
-      
-
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
-  <main class="main" style="padding-top: 96px;">
-    <!-- Title -->
-    <div class="page-title">
+  <main class="main offset-for-header">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container text-center">
           <h1>My Hero</h1>
@@ -144,69 +292,148 @@
     </div>
 
     <!-- Who He Is -->
-    <section class="section">
+    <section class="section" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="box">
           <h2 class="h4 subtitle">Who He Is</h2>
           <p class="mt-3">
-            David is a <span class="highlight">master carpenter, caregiver, nurse, best friend, psychologist, housekeeper, chef, and handyman</span>.
+            David is a
+            <span class="highlight">
+              master carpenter, caregiver, nurse, best friend, psychologist,
+              housekeeper, chef, and handyman
+            </span>.
           </p>
         </div>
       </div>
     </section>
 
     <!-- How We Met -->
-    <section class="section">
+    <section class="section" data-aos="fade-up" data-aos-delay="150">
       <div class="container">
         <div class="box">
           <h2 class="h4 subtitle">How We Met</h2>
+
           <p>
-            We met in the parking lot of a nightclub in Santa Cruz when a friend asked me if I would give him a ride back to Big Sur. I reluctantly said yes—hesitant about putting his dog in the backseat of my rental car, which I had to return in the morning. He was so thankful, leaving $80 in my cup holder when I dropped him off.
+            We met in the parking lot of a nightclub in Santa Cruz in January
+            2019. Through a mutual acquaintance, I was asked to give him a ride
+            back to his truck in Big Sur, and I said yes. At the time, I had no
+            idea that such a simple favor would become the beginning of one of
+            the greatest loves of my life.
           </p>
+
           <p>
-            The next day he showed up at the restaurant where I was waitressing, ordered some cheesecake, and—with confidence I didn’t understand—asked me out. I boldly declined, stating that I preferred to do my own thing. I was thinking, “Who does this guy think he is?” Clearly, I had no idea.
+            The very next day, he showed up at the restaurant where I was
+            waitressing, ordered cheesecake, and with a confidence I did not
+            quite know what to do with, asked me out. I turned him down,
+            insisting that I preferred to do my own thing. I remember thinking,
+            "Who does this guy think he is?" What I did not know then was that
+            he was about to become someone I would love more deeply than I could
+            have imagined.
           </p>
-    
+
           <p>
-            One night, after my shift, I joined friends around the fire table on the back patio of the bar and grill where I worked and lived. David was there with Hirie (his Staffordshire Terrier) and his girlfriend. The girls were yammering on about some nonsense, and I looked at him and whispered, “Can we just get out of here?” He nodded. I stood up and walked out the door. He and Hirie got in my car without a word, and I drove about an hour south to a magical sandy beach on a cliff. <strong>The rest is history.</strong>
+            But after seeing him around more, and learning that he was not only
+            handsome and bold but also a master carpenter building a
+            multimillion-dollar home in the area, something shifted in me. I
+            started to see the man behind the confidence, and suddenly it all
+            clicked. He felt different. Special. Like someone I was meant to
+            know. So one night, I lured him into my car, and down the coast we
+            went. <strong>The rest is history.</strong>
           </p>
+
           <div class="row g-3 mt-3">
-            <div class="col-md-4"><img src="assets/img/3_david.JPG" alt="David smiling, photo 3" class="hero-img"></div>
-            <div class="col-md-4"><img src="assets/img/5_david.JPG" alt="David on a sunny day, photo 5" class="hero-img"></div>
-            <div class="col-md-4"><img src="assets/img/1_david.jpeg" alt="David at the coast, photo 1" class="hero-img"></div>
+            <div class="col-md-4">
+              <img
+                src="assets/img/3_david.JPG"
+                alt="David smiling, photo 3"
+                class="hero-img"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="assets/img/5_david.JPG"
+                alt="David on a sunny day, photo 5"
+                class="hero-img"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="assets/img/1_david.jpeg"
+                alt="David at the coast, photo 1"
+                class="hero-img"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Before the Crash -->
-    <section class="section">
+    <section class="section" data-aos="fade-up" data-aos-delay="200">
       <div class="container">
         <div class="box">
           <h2 class="h4 subtitle">Before the Crash</h2>
           <p>
-            He proposed about a year and a half later—two days before my birthday in January 2022. Fast‑forward six months: he was building a multimillion‑dollar mini‑mansion in the Carmel Valley Preserve. I was waitressing at a world‑renowned restaurant called Nepenthe. Our life was perfect. We were what they call a power couple. That’s when I crashed.
+            He proposed about a year and a half later, two days before my
+            birthday in January 2021. Fast-forward a year and six months: he was
+            working on another project, a multimillion-dollar mini-mansion in
+            the Carmel Valley Preserve. I was waitressing at a world-renowned
+            restaurant called Nepenthe. Our life was perfect. We were what they
+            call a power couple. That is when I crashed.
           </p>
+
           <div class="row g-3 mt-3">
-            <div class="col-md-6"><img src="assets/img/2_david.JPG" alt="David with tools, photo 2" class="hero-img"></div>
-            <div class="col-md-6"><img src="assets/img/4_david.PNG" alt="David at worksite, photo 4" class="hero-img"></div>
+            <div class="col-md-6">
+              <img
+                src="assets/img/2_david.JPG"
+                alt="David with tools, photo 2"
+                class="hero-img"
+              />
+            </div>
+            <div class="col-md-6">
+              <img
+                src="assets/img/4_david.PNG"
+                alt="David at worksite, photo 4"
+                class="hero-img"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- After the Crash -->
-    <section class="section">
+    <section class="section" data-aos="fade-up" data-aos-delay="250">
       <div class="container">
         <div class="box">
           <h2 class="h4 subtitle">After the Crash</h2>
           <p>
-            David never left my side after the accident (three years later I could still barely get him to leave me alone for a minute).
+            David never left my side after the accident. From that moment on, he
+            became my constant, my comfort, my strength, and the steady heart
+            beside me through every fear, every setback, and every small
+            victory. Even three years later, he is still right there, loving me
+            so faithfully that I can hardly get him to leave me alone for even a
+            minute.
           </p>
           <ul class="mt-2 mb-0">
-            <li>I woke up in the ICU, and David was begging me to marry him on the spot.</li>
-            <li>He has been my full‑time caregiver, nurse, best friend, psychologist, housekeeper, chef, gardener, and handyman.</li>
-            <li>“Can you please pick up this?” “Can you hand me that?” “Baaabe! I need my—” “I can’t reach the—” You get the point.</li>
+            <li>
+              When I woke up in the ICU, David was already there, loving me
+              through the shock and the pain, begging me to marry him right then
+              and there.
+            </li>
+            <li>
+              Since that day, he has been so much more than my fiance. He has
+              been my full-time caregiver, nurse, best friend, protector,
+              housekeeper, chef, gardener, handyman, and the person who carries
+              me through the hardest parts of life with endless love and
+              patience.
+            </li>
+            <li>
+              Every day, in a hundred small ways, he shows up for me, picking
+              things up, handing me what I cannot reach, listening before I even
+              finish asking, and meeting my needs with a love that is constant,
+              tender, and unwavering.
+            </li>
           </ul>
         </div>
       </div>
@@ -217,21 +444,67 @@
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener" class="bi bi-facebook" aria-label="Facebook"></a>
-        <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener" class="bi bi-instagram ms-3" aria-label="Instagram"></a>
+        <a
+          href="https://www.facebook.com/shena.ellis"
+          target="_blank"
+          rel="noopener"
+          class="bi bi-facebook"
+          aria-label="Facebook"
+        ></a>
+        <a
+          href="https://www.instagram.com/mermangel_maghillicuddie"
+          target="_blank"
+          rel="noopener"
+          class="bi bi-instagram ms-3"
+          aria-label="Instagram"
+        ></a>
       </div>
+
       <div class="container text-center mt-2">
         <div class="copyright">
-          <span>©</span> <strong class="px-1 sitename">Shena Ellis</strong> <span>All Rights Reserved</span>
+          <span>&copy;</span>
+          <strong class="px-1 sitename">Shena Ellis</strong>
+          <span>All Rights Reserved</span>
         </div>
+
         <div class="footer-links">
-          <a href="sitemap.html" class="text-decoration-none" style="color: var(--lime); font-weight: 600;">Site Map</a>
+          <a
+            href="sitemap.html"
+            class="text-decoration-none"
+            style="color: var(--lime); font-weight: 600;"
+          >
+            Site Map
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Scroll Top -->
+  <a
+    href="#"
+    id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center"
+  >
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
