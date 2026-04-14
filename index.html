@@ -10,7 +10,7 @@
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_3.png">
-  <link rel="apple-touch-icon" href="assets/img/s_favicon.png"> <!-- FIXED missing closing > -->
+  <link rel="apple-touch-icon" href="assets/img/s_favicon.png">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,7 +27,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Page-specific small styles (moved out of <li>) -->
   <style>
     .rainbow-text {
       font-weight: 700;
@@ -40,20 +39,13 @@
       animation: rainbowShift 8s ease infinite;
       display: inline-block;
     }
+
     @keyframes rainbowShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
   </style>
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Mar 05 2025 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -62,10 +54,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename"> </h1>
+        <h1 class="sitename"></h1>
       </a>
-
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -79,41 +69,31 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <!-- Mobile nav toggle (the missing piece on iPhone) -->
-        <button
-  class="mobile-nav-toggle d-xl-none bi bi-list"
-  type="button"
-  aria-label="Toggle navigation"
-  aria-controls="navmenu"
-  aria-expanded="false">
-</button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
 
     </div>
   </header>
 
   <main class="main">
 
-    <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
       <img src="assets/img/about_image.jpeg" alt="" data-aos="fade-in">
+
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h2>Shena M. Ellis</h2>
-     <p class="hero-line">
-  I am
-  <span class="moving-words">
-    <span
-      class="typed"
-      data-typed-items="a Student, a Quadriplegic, a Survivor, a Poet, starting over from scratch, a Friend, a Local, an Inspiration, trying to find my way, Adapting">
-    </span>
-  </span>
-  <span class="typed-cursor typed-cursor--blink"></span>
-</p>
+        <p class="hero-line">
+          I am
+          <span class="moving-words">
+            <span
+              class="typed"
+              data-typed-items="a Student, a Quadriplegic, a Survivor, a Poet, starting over from scratch, a Friend, a Local, an Inspiration, trying to find my way, Adapting">
+            </span>
+          </span>
+          <span class="typed-cursor typed-cursor--blink"></span>
+        </p>
       </div>
-      <!-- removed an extra stray </div> that closed nothing -->
     </section>
-    <!-- /Hero Section -->
 
   </main>
 
@@ -128,7 +108,9 @@
       </div>
 
       <div class="copyright mt-3">
-        <span>Copyright</span> <strong class="px-1 sitename">Shena Ellis</strong> <span>All Rights Reserved</span>
+        <span>Copyright</span>
+        <strong class="px-1 sitename">Shena Ellis</strong>
+        <span>All Rights Reserved</span>
       </div>
 
       <div class="footer-links mt-2">
@@ -146,12 +128,10 @@
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- Preloader -->
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
@@ -168,21 +148,5 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const body = document.body;
-    const toggle = document.querySelector(".mobile-nav-toggle");
-    const nav = document.querySelector("#navmenu");
-
-    if (!toggle || !nav) return;
-
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      body.classList.toggle("mobile-nav-active");
-      toggle.classList.toggle("bi-list");
-      toggle.classList.toggle("bi-x");
-    });
-  });
-</script>
 </body>
 </html>
