@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index — My Homepage</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Shena M. Ellis</title>
+  <meta name="description" content="Shena M. Ellis — student, survivor, poet, and author sharing poetry, story, and life after spinal cord injury.">
+  <meta name="keywords" content="Shena Ellis, poetry, quadriplegia, spinal cord injury, GoFundMe, power assist wheelchair wheels">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/s_favicon_2.png">
@@ -27,6 +27,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Homepage Styles -->
   <style>
     .rainbow-text {
       font-weight: 700;
@@ -45,44 +46,131 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    .hero-line {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .hero-btn,
+    .donate-btn {
+      display: inline-block;
+      padding: 0.85rem 1.35rem;
+      border: 2px solid #32cd32;
+      border-radius: 999px;
+      color: #ffffff;
+      font-family: var(--nav-font);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.45);
+      transition: all 0.3s ease;
+    }
+
+    .hero-btn:hover,
+    .hero-btn:focus,
+    .donate-btn:hover,
+    .donate-btn:focus {
+      background: #32cd32;
+      color: #000000;
+      box-shadow: 0 0 18px rgba(50, 205, 50, 0.45);
+      text-decoration: none;
+    }
+
+    .gofundme-section {
+      background: #000000;
+      color: #ffffff;
+    }
+
+    .gofundme-card {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 2rem;
+      border: 2px solid #32cd32;
+      border-radius: 22px;
+      background: rgba(0, 0, 0, 0.65);
+      box-shadow: 0 0 24px rgba(50, 205, 50, 0.25);
+    }
+
+    .gofundme-card h2 {
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .gofundme-card p {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gofundme-wrapper {
+      max-width: 720px;
+      min-height: 520px;
+      margin: 1.5rem auto 1rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .gofundme-fallback {
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: limegreen;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus {
+      color: #32cd32;
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body class="index-page">
-
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename"></h1>
+      <a href="index.html" class="logo d-flex align-items-center" aria-label="Go to homepage">
+        <h1 class="sitename">Shena Ellis</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" aria-label="Primary navigation">
         <ul>
           <li><a href="index.html" class="rainbow-text">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="book.html">From When I Could Walk</a></li>
+          <li><a href="book.html">Book</a></li>
           <li><a href="my_hero.html">My Hero</a></li>
           <li><a href="the_crash.html">The Crash</a></li>
           <li><a href="quadriplegia.html">Quadriplegia</a></li>
           <li><a href="poetry.html">Poetry</a></li>
+          <li><a href="#gofundme">GoFundMe</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Toggle navigation"></i>
       </nav>
-
     </div>
   </header>
 
   <main class="main">
-
+    <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-      <img src="assets/img/about_image.jpeg" alt="" data-aos="fade-in">
+      <img src="assets/img/about_image.jpeg" alt="Portrait of Shena Ellis" data-aos="fade-in">
 
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h2>Shena M. Ellis</h2>
+
         <p class="hero-line">
           I am
           <span class="moving-words">
@@ -93,19 +181,56 @@
           </span>
           <span class="typed-cursor typed-cursor--blink"></span>
         </p>
+
+        <div class="hero-buttons">
+          <a href="#gofundme" class="hero-btn">Support My Wheelchair Freedom</a>
+          <a href="poetry.html" class="hero-btn">Read My Poetry</a>
+        </div>
       </div>
     </section>
+    <!-- /Hero Section -->
 
+    <!-- GoFundMe Section -->
+    <section id="gofundme" class="gofundme-section section">
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="gofundme-card">
+          <h2>Help Me Gain More Freedom</h2>
+
+          <p>
+            I am raising money for power assist wheelchair wheels. These wheels would help me move
+            with more independence, less strain, and more freedom in everyday life.
+          </p>
+
+          <div class="gofundme-wrapper">
+            <div
+              class="gfm-embed"
+              data-url="https://www.gofundme.com/f/help-shena-gain-more-freedom-with-powerassist-wheels/widget/large?sharesheet=undefined&attribution_id=sl:68fe03d5-18bc-4876-987e-e7c30aff732a">
+            </div>
+          </div>
+
+          <p class="gofundme-fallback">
+            <a
+              href="https://www.gofundme.com/f/help-shena-gain-more-freedom-with-powerassist-wheels"
+              class="donate-btn"
+              target="_blank"
+              rel="noopener noreferrer">
+              Donate on GoFundMe
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- /GoFundMe Section -->
   </main>
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h4 class="sitename">This was not meant to publush</h4>
+      <h4 class="sitename">This was not meant to publish</h4>
       <p>Nor meant to be read. Just a means to uncover <br> the mess in this head</p>
 
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/shena.ellis" target="_blank" class="bi bi-facebook" aria-label="Facebook"></a>
-        <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" class="bi bi-instagram" aria-label="Instagram"></a>
+        <a href="https://www.facebook.com/shena.ellis" target="_blank" rel="noopener noreferrer" class="bi bi-facebook" aria-label="Facebook"></a>
+        <a href="https://www.instagram.com/mermangel_maghillicuddie" target="_blank" rel="noopener noreferrer" class="bi bi-instagram" aria-label="Instagram"></a>
       </div>
 
       <div class="copyright mt-3">
@@ -115,12 +240,7 @@
       </div>
 
       <div class="footer-links mt-2">
-        <a href="sitemap.html"
-           style="color: limegreen; font-weight:600; text-decoration:none;"
-           onmouseover="this.style.color='#32cd32'; this.style.textDecoration='underline';"
-           onmouseout="this.style.color='limegreen'; this.style.textDecoration='none';">
-          Site Map
-        </a>
+        <a href="sitemap.html">Site Map</a>
       </div>
 
       <div class="credits mt-2">
@@ -129,10 +249,12 @@
     </div>
   </footer>
 
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
+  <!-- Preloader -->
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
@@ -149,5 +271,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- GoFundMe Embed Script -->
+  <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
 </body>
 </html>
